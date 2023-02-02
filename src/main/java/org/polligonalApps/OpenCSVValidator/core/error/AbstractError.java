@@ -11,6 +11,12 @@ public abstract class AbstractError {
     private String keyError;
     private String messageError;
 
+    public AbstractError(Long row,String keyError, AbstractColumn column) {
+        this.row = row;
+        this.keyError = keyError;
+        this.column = column;
+    }
+
     public void setMessageError(String messageError){
         this.messageError = messageError;
     }
@@ -20,5 +26,9 @@ public abstract class AbstractError {
     }
     public String getMessageError(){
         return this.messageError;
+    }
+
+    public String getKeyError(){
+        return this.keyError;
     }
 }
