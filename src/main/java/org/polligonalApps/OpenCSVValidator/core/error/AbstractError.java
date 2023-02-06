@@ -27,6 +27,9 @@ public abstract class AbstractError {
     public String getMessageError(){
         return this.messageError;
     }
+    public AbstractColumn getColumn(){
+        return this.column;
+    }
 
     public String getKeyError(){
         return this.keyError;
